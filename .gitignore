@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+ENV/
+
+# Temporary and Uploaded Files
+uploads/*
+!uploads/.gitkeep
+
+# Nova Astro template scratch & zip
+nova-astro/
+nova-astro*.zip
+
+# Operating System & IDE
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Temporary scripts / logs
+*.log
+scratch/
