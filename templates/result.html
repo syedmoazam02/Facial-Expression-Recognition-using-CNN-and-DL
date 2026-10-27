@@ -170,7 +170,7 @@
 <body>
     <div class="container">
         <h1>Facial Expression Recognition</h1>
-        <div class="project-meta">College Minor Project (5th Sem) &bull; <strong>Syed Moazam (160923748131)</strong></div>
+        <div class="project-meta">Deep Learning System &bull; <strong>Syed Moazam</strong></div>
 
         <form method="POST" enctype="multipart/form-data" action="/predict" id="predictionForm">
             <input type="file" name="file" id="fileInput" accept="image/*" required>
@@ -178,12 +178,12 @@
         </form>
 
         <div class="samples-hint">
-            <strong>Fig 9.2 Test Samples:</strong><br>
-            <a href="javascript:void(0)" onclick="loadSample('/static/samples/4 (1).jpg', '4 (1).jpg')">4 (1).jpg (Primary Demo)</a> &bull;
-            <a href="javascript:void(0)" onclick="loadSample('/static/samples/4 (3).jpg', '4 (3).jpg')">4 (3).jpg</a> &bull;
-            <a href="javascript:void(0)" onclick="loadSample('/static/samples/4 (4).jpg', '4 (4).jpg')">4 (4).jpg</a> &bull;
-            <a href="javascript:void(0)" onclick="loadSample('/static/samples/4 (5).jpg', '4 (5).jpg')">4 (5).jpg</a> &bull;
-            <a href="javascript:void(0)" onclick="loadSample('/static/samples/4 (8).jpg', '4 (8).jpg')">4 (8).jpg</a>
+            <strong>Sample Images:</strong><br>
+            <a href="javascript:void(0)" onclick="loadSample('/static/samples/4 (1).jpg', '4 (1).jpg')">Sample 1 (Happy)</a> &bull;
+            <a href="javascript:void(0)" onclick="loadSample('/static/samples/4 (3).jpg', '4 (3).jpg')">Sample 2</a> &bull;
+            <a href="javascript:void(0)" onclick="loadSample('/static/samples/4 (4).jpg', '4 (4).jpg')">Sample 3</a> &bull;
+            <a href="javascript:void(0)" onclick="loadSample('/static/samples/4 (5).jpg', '4 (5).jpg')">Sample 4</a> &bull;
+            <a href="javascript:void(0)" onclick="loadSample('/static/samples/4 (8).jpg', '4 (8).jpg')">Sample 5</a>
         </div>
 
         {% if image_url %}
@@ -196,8 +196,8 @@
         {% endif %}
 
         <footer>
-            <p>Powered by <a href="#">TensorFlow</a> &amp; <a href="#">Keras</a> | Flask Interface</p>
-            <p class="footer-author">Department of CSE (AI&amp;ML) &bull; Lords Institute of Engineering and Technology</p>
+            <p>Powered by <a href="#">Deep Learning</a> &amp; <a href="#">CNN</a> | Flask Interface</p>
+            <p class="footer-author">Developed by Syed Moazam</p>
         </footer>
     </div>
 

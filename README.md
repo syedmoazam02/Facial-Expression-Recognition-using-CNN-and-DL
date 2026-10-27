@@ -4,16 +4,12 @@
 [![Framework-Flask](https://img.shields.io/badge/Framework-Flask-green.svg)](https://flask.palletsprojects.com/)
 [![Deep Learning-TensorFlow/Keras](https://img.shields.io/badge/Deep%20Learning-TensorFlow%20%2F%20Keras-orange.svg)](https://tensorflow.org/)
 [![Computer Vision-OpenCV](https://img.shields.io/badge/Computer%20Vision-OpenCV-red.svg)](https://opencv.org/)
-[![License-MIT](https://img.shields.io/badge/Academic-Minor%20Project-lightgrey.svg)]()
+[![License-MIT](https://img.shields.io/badge/License-MIT-lightgrey.svg)]()
 
-### College Minor Project — 5th Semester
-- **Department**: Department of Computer Science and Engineering — Artificial Intelligence & Machine Learning (CSE - AI&ML)
-- **Institution**: Lords Institute of Engineering and Technology (UGC Autonomous), Hyderabad
-- **Academic Year**: 2025–2026
-- **Student**: **SYED MOAZAM**
-- **Roll Number**: **160923748131**
-- **Internal Guide**: **Ms. Zeba Ruqshanh** *(Assistant Professor)*
-
+### Project Information
+- **Domain**: Deep Learning & Computer Vision
+- **Model**: CNN (mini_XCEPTION) trained on FER-2013
+- **Developer**: **SYED MOAZAM**
 ---
 
 ## 📌 Project Overview
@@ -137,7 +133,5 @@ The user interface is designed strictly in accordance with **Chapter 8 (Section 
 ---
 
 ## 👤 Author & Attribution
-- **Student**: Syed Moazam (Roll No: `160923748131`)
-- **Institution**: Lords Institute of Engineering and Technology, Hyderabad
-- **Department**: Computer Science and Engineering (AI&ML)
-- **Supervision**: Ms. Zeba Ruqshanh, Assistant Professor, Dept. of CSE (AI&ML)
+- **Developer**: Syed Moazam
+- **Field**: Computer Science and Engineering (AI&ML)
