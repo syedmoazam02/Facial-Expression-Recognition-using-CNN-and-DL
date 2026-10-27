@@ -38,6 +38,24 @@ app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024  # 16 MB max upload
 
+# WSGI Middleware to normalize PATH_INFO from Vercel Serverless rewrites
+class PathPrefixMiddleware:
+    def __init__(self, wsgi_app):
+        self.wsgi_app = wsgi_app
+
+    def __call__(self, environ, start_response):
+        path = environ.get('PATH_INFO', '')
+        for prefix in ('/api/index', '/api', '/app.py'):
+            if path == prefix:
+                environ['PATH_INFO'] = '/'
+                break
+            elif path.startswith(prefix + '/'):
+                environ['PATH_INFO'] = path[len(prefix):]
+                break
+        return self.wsgi_app(environ, start_response)
+
+app.wsgi_app = PathPrefixMiddleware(app.wsgi_app)
+
 try:
     os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 except Exception:
@@ -138,6 +156,8 @@ def run_prediction(img_input):
 
 # Routes
 @app.route('/')
+@app.route('/api/index')
+@app.route('/app.py')
 def home():
     return render_template(
         "result.html",
@@ -149,6 +169,8 @@ def home():
     )
 
 @app.route('/predict', methods=['POST'])
+@app.route('/api/index/predict', methods=['POST'])
+@app.route('/app.py/predict', methods=['POST'])
 def predict():
     if 'file' not in request.files:
         return render_template("result.html", result="No file uploaded", image_url=None)
